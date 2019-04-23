@@ -1,0 +1,14 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+@{
+    var UserId = Context.Session.GetInt32("UserId");
+    if(UserId == null){
+       Context.Response.Redirect("Account");
+    }
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido al Sistema de Libreria Santa Rosa</h1>
+    
+</div>
